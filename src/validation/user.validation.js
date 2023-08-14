@@ -1,12 +1,11 @@
-const joi = require("joi");
-
+const joi=require('joi')
 /** create user */
 const createUser = {
     body:joi.object().keys({
-        first_name:joi.string().require().trim(),
-        last_name:joi.string().require().trim(),
-        email:joi.string().require().trim(),
-        password:joi.string().require().trim(),
-        phoneno:joi.string().allow().trim(),
+        first_name: joi.string().required().trim(),
+        last_name: joi.string().required().trim(),
+        email: joi.string().required().trim(),
+        password: joi.string().required().trim(),
+        phoneno: joi.string().allow().trim(),
     }),
 }

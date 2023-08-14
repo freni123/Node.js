@@ -14,6 +14,10 @@ const userSchema = new mongoose.Schema(
             type:String,
             trim:true,
         },
+        Phoneno:{
+            type:Number,
+            trim:true,
+        },
     },
     {
         timesstamps:true,
@@ -22,5 +26,4 @@ const userSchema = new mongoose.Schema(
 );
 
 const user = mongoose.model('user',userSchema);
-
 module.exports=user;
