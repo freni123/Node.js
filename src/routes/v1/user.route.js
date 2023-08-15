@@ -1,5 +1,6 @@
 const express = require('express');
-const { userValidation } = require('../../validation');
+const {userController} = require('../../controllers')
+// const { userValidation } = require('../../validation');
 
 const router = express.Router();
 
@@ -7,7 +8,7 @@ const router = express.Router();
 router.post(
     "/create-user",
     // validate(userValidation.createUser),
-    // userController.createUser
+     userController.createUser
 );
 // Get user
 router.get(
