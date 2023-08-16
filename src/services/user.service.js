@@ -1,4 +1,4 @@
-const { User} = require('../models');
+const { user} = require('../models');
 
 /**
  * Create user
@@ -6,6 +6,6 @@ const { User} = require('../models');
  * @returns {Promise<User>}
  */
 const createUser = async (reqBody) => {
-    return User.create(reqBody);
+    return user.create(reqBody);
   };
   module.exports = {createUser};

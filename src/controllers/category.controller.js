@@ -1,7 +1,7 @@
-const { userService} = require("../services");
+const { categoryService} = require("../services");
 
 /** create user */
-const createUser = async (req, res) => {
+const createCategory = async (req, res) => {
     try {
       const reqBody = req.body;
       console.log(reqBody);
@@ -9,8 +9,8 @@ const createUser = async (req, res) => {
       // if (userExists) {
       //   throw new Error("User already created by this email!");
       // }
-      const user = await userService.createUser(reqBody);
-      if (!user) {
+      const category = await categoryService.createCategory(reqBody);
+      if (!category) {
         throw new Error("Something went wrong, please try again or later!");
       }
       res.status(200).json({
@@ -22,4 +22,4 @@ const createUser = async (req, res) => {
       res.status(400).json({ success: false, message: error.message });
     }
   };
-  module.exports = {createUser}
+  module.exports = {createCategory}
